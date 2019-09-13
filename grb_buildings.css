@@ -1,0 +1,28 @@
+
+meta   
+{
+	title: "Coloured GRB buildings";
+	author: "gplv2"; 
+	version: "1"; 
+	description: "Style to highlight GRB buildings (belgium)";
+        link: "https://josm.openstreetmap.de/wiki/Styles/Coloured_buildings";
+        watch-modified: true;
+}
+meta[lang=nl]
+{
+        title: "Gekleurde GRB gebouwen";
+        description: "Stijl om GRB gebouwen te doen opvallen";
+        link: "https://josm.openstreetmap.de/wiki/De:Styles/Coloured_buildings";
+}
+
+/* highlight GRB buildings */
+way["source:geometry:ref"]
+{
+	font-size: 12;
+	z-index: 1;
+	color: white;
+	width: 15; 
+	dashes: 20,4;
+	dashes-background-color: #FFFF00;
+}
+
