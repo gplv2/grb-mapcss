@@ -37,7 +37,7 @@ area[source:geometry:ref=~/Urbis.*/]:new
     text-position: center;
     text-offset: 19;
     z-index: 1;
-    color: red; 
+    color: blue; 
     fill-color: blue; 
     width: 3;
     dashes: 10,2;
@@ -65,7 +65,7 @@ area[source:geometry:ref=~/Gbg.*/]:new
     text-position: center;
     text-offset: 19;
     z-index: 1;
-    color: red; 
+    color: blue; 
     fill-color: blue; 
     width: 3;
     dashes: 10,2;
@@ -93,7 +93,7 @@ area[source:geometry:ref=~/Gba.*|Knw.*/]:new
     text-position: center;
     z-index: 1;
     text-offset: 19;
-    color: red; 
+    color: blue; 
     fill-color: blue; 
     width: 3;
     dashes: 10,2;
@@ -121,7 +121,7 @@ area[source:geometry:ref=~/Picc.*/]:new
     text-position: center;
     text-offset: 19;
     z-index: 1;
-    color: red; 
+    color: blue; 
     fill-color: blue; 
     width: 3;
     dashes: 10,2;
