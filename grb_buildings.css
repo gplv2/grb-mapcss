@@ -2,7 +2,7 @@ meta
 {
     title: "Colored Building entities for URBIS/GRB/PICC migration";
     author: "gplas"; 
-    version: "1.3"; 
+    version: "1.4"; 
     description: "Style to classify buildings for BE imports (English) GRB, PICC or URBIS entities.  Helps to select merging or selecting correct tags (like date, references";
     link: "https://bitless.be/osm/mapcss/grb_buildings.css";
         watch-modified: true;
@@ -18,12 +18,27 @@ meta[lang=nl]
 
 area[source:geometry:ref=~/Urbis.*/] 
 {
-    text: "source:geometry:ref";
+    text: eval(concat(tag("source:geometry:ref"), " - ", tag("source:geometry:version")));
     text-color: white; 
     font-size: 15;
+    text-offset: -19;
     z-index: 1;
-    color: #00FA9A; 
-    fill-color: #8A2BE2; 
+    color: blue; 
+    fill-color: blue; 
+    width: 3;
+    dashes: 10,2;
+}
+
+area[source:geometry:ref=~/Urbis.*/]:new
+{
+    text: eval(concat(tag("source:geometry:ref"), " - ", tag("source:geometry:version")));
+    text-color: yellow; 
+    font-size: 15;
+    text-position: center;
+    text-offset: 19;
+    z-index: 1;
+    color: red; 
+    fill-color: blue; 
     width: 3;
     dashes: 10,2;
 }
@@ -45,49 +60,41 @@ area[source:geometry:ref=~/Gbg.*/]
 area[source:geometry:ref=~/Gbg.*/]:new
 {
     text: eval(concat(tag("source:geometry:ref"), " - ", tag("source:geometry:date")));
-    text-color: yellow; 
+    text-color: green; 
     font-size: 15;
     text-position: center;
     text-offset: 19;
     z-index: 1;
-    color: yellow; 
-    fill-color: yellow; 
+    color: red; 
+    fill-color: blue; 
     width: 3;
     dashes: 10,2;
 }
 
-area[source:geometry:ref=~/Gba.*/] 
+area[source:geometry:ref=~/Gba.*|Knw.*/] 
 {
     text: "source:geometry:ref";
     text-color: white; 
-    font-size: 13;
+    font-size: 15;
+    text-position: center;
+    text-offset: -19;
     z-index: 1;
-    color: #0000FF; 
-    fill-color: #87CEEB; 
+    color: blue; 
+    fill-color: blue; 
     width: 3;
     dashes: 10,2;
 }
 
-area[source:geometry:ref=~/Gba.*/]:new
+area[source:geometry:ref=~/Gba.*|Knw.*/]:new
 {
     text: eval(concat(tag("source:geometry:ref"), " - ", tag("source:geometry:date")));
     text-color: yellow; 
-    font-size: 13;
-    z-index: 1;
-    color: #0000FF; 
-    fill-color: #87CEEB; 
-    width: 3;
-    dashes: 10,2;
-}
-
-area[source:geometry:ref=~/Knw.*/] 
-{
-    text: "source:geometry:ref";
-    text-color: black; 
     font-size: 15;
+    text-position: center;
     z-index: 1;
-    color: #0000FF; 
-    fill-color: #228B22; 
+    text-offset: 19;
+    color: red; 
+    fill-color: blue; 
     width: 3;
     dashes: 10,2;
 }
@@ -114,8 +121,8 @@ area[source:geometry:ref=~/Picc.*/]:new
     text-position: center;
     text-offset: 19;
     z-index: 1;
-    color: yellow; 
-    fill-color: yellow; 
+    color: red; 
+    fill-color: blue; 
     width: 3;
     dashes: 10,2;
 }
