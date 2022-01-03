@@ -60,7 +60,7 @@ area[source:geometry:ref=~/Gbg.*/]
 area[source:geometry:ref=~/Gbg.*/]:new
 {
     text: eval(concat(tag("source:geometry:ref"), " - ", tag("source:geometry:date")));
-    text-color: green; 
+    text-color: yellow; 
     font-size: 15;
     text-position: center;
     text-offset: 19;
