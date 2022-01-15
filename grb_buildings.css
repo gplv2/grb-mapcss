@@ -127,3 +127,9 @@ area[source:geometry:ref=~/Picc.*/]:new
     dashes: 10,2;
 }
 
+node[fixme], way[fixme] {
+    fill-color: #f0f;
+    text: eval("fixme");
+    text-halo-color: #f0f;
+}
+
